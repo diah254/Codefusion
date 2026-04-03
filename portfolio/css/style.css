@@ -364,11 +364,19 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   margin-bottom: 10px;
 }
+
+/* Colored skill titles */
+.skill-card:nth-child(1) h3 { color: #ef4444; }
+.skill-card:nth-child(2) h3 { color: #3b82f6; }
+.skill-card:nth-child(3) h3 { color: #22c55e; }
+.skill-card:nth-child(4) h3 { color: #f97316; }
+
 .skill-card p {
   font-size: 0.92rem;
-  color: var(--text-light);
+  color: var(--text);
   margin-bottom: 16px;
   line-height: 1.6;
+  font-weight: 600;
 }
 
 .skill-tags {
