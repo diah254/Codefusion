@@ -499,10 +499,7 @@ img { max-width: 100%; display: block; }
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
-/* ===== SKILL ICON vibrant gradient ===== */
-.skill-icon {
-  background: linear-gradient(135deg, var(--primary), var(--cyan)) !important;
-}
+/* ===== SKILL ICON images ===== */
 
 /* ===== SKILLS ===== */
 .skills-grid {
@@ -525,15 +522,27 @@ img { max-width: 100%; display: block; }
 }
 
 .skill-icon {
-  width: 56px; height: 56px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border-radius: 14px;
+  width: 100%;
+  height: 160px;
+  background: transparent;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  overflow: hidden;
 }
-.skill-icon i { color: white; font-size: 1.4rem; }
+.skill-icon img {
+  width: 140px !important;
+  height: 140px !important;
+  max-width: 140px !important;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+  display: block;
+}
+.skill-card:hover .skill-icon img {
+  transform: scale(1.08);
+}
 
 .skill-card h3 {
   font-size: 1.1rem;
