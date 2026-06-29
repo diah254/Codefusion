@@ -499,11 +499,15 @@ img { max-width: 100%; display: block; }
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
-/* ===== SKILLS ===== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+/* ===== SKILLS SWIPER ===== */
+.skills-swiper {
+  width: 100%;
+  padding: 16px 0 40px;
+  overflow: hidden;
+}
+.skills-swiper .swiper-slide {
+  width: 300px;
+  height: auto;
 }
 
 .skill-card {
