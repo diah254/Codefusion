@@ -105,7 +105,18 @@ body.page-bg #skills    {
 }
 #featured  { background: #ffffff; position: relative; overflow: hidden; }
 #blog      { background: #f8fafc; position: relative; overflow: hidden; }
-#contact   { background: #ffffff !important; position: relative; overflow: hidden; }
+#contact   {
+  background: url('images/contact-bg.png') center/cover no-repeat !important;
+  position: relative;
+  overflow: hidden;
+}
+#contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 8, 20, 0.80);
+  z-index: 0;
+}
 
 /* Colourful blob decorations in each section */
 #skills::before {
@@ -160,24 +171,6 @@ body.page-bg #skills    {
   border-radius: 50%;
   background: radial-gradient(circle, rgba(251,146,60,0.48) 0%, rgba(249,115,22,0.16) 55%, transparent 100%);
   bottom: -90px; left: -80px;
-  pointer-events: none; z-index: 0;
-}
-#contact::before {
-  content: '';
-  position: absolute;
-  width: 380px; height: 380px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(248,113,113,0.48) 0%, rgba(239,68,68,0.16) 55%, transparent 100%);
-  bottom: -120px; left: -100px;
-  pointer-events: none; z-index: 0;
-}
-#contact::after {
-  content: '';
-  position: absolute;
-  width: 280px; height: 280px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(244,114,182,0.48) 0%, rgba(236,72,153,0.16) 55%, transparent 100%);
-  top: -80px; right: -60px;
   pointer-events: none; z-index: 0;
 }
 
@@ -826,13 +819,15 @@ img { max-width: 100%; display: block; }
   gap: 8px;
   padding: 16px 10px;
   border-radius: 14px;
-  background: #f8fafc;
-  border: 1px solid #e8edf3;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .contact-item-card h4 {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--text-light);
+  color: rgba(255,255,255,0.6);
   text-transform: uppercase;
   letter-spacing: 0.07em;
   margin: 0;
@@ -841,7 +836,7 @@ img { max-width: 100%; display: block; }
 .contact-item-card span {
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .contact-item {
@@ -945,10 +940,12 @@ img { max-width: 100%; display: block; }
 
 /* ===== FORM ===== */
 .contact-form {
-  background: var(--white);
-  padding: 24px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
 }
 
 .form-row {
@@ -988,6 +985,26 @@ img { max-width: 100%; display: block; }
 .form-group textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(108,99,255,0.12);
+}
+
+/* ===== CONTACT DARK BG OVERRIDES ===== */
+#contact .section-label   { color: var(--cyan); }
+#contact .section-title   { color: #ffffff; }
+#contact .section-desc    { color: rgba(255,255,255,0.7); }
+#contact .contact-name-link { color: var(--cyan) !important; }
+#contact .form-group label { color: rgba(255,255,255,0.85); }
+#contact .form-group input,
+#contact .form-group textarea {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+  color: #ffffff;
+}
+#contact .form-group input::placeholder,
+#contact .form-group textarea::placeholder { color: rgba(255,255,255,0.4); }
+#contact .form-group input:focus,
+#contact .form-group textarea:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(34,211,238,0.15);
 }
 
 .form-success {
