@@ -106,7 +106,7 @@ body.page-bg #skills    {
 #featured  { background: #ffffff; position: relative; overflow: hidden; }
 #blog      { background: #f8fafc; position: relative; overflow: hidden; }
 #contact   {
-  background: url('images/contact-bg.png') center/cover no-repeat !important;
+  background: url('../images/contact-bg.png') center/cover no-repeat !important;
   position: relative;
   overflow: hidden;
 }
@@ -805,38 +805,48 @@ img { max-width: 100%; display: block; }
   align-items: start;
 }
 
-/* 2-column row for Email / WhatsApp */
+/* Inline contact channels row */
 .contact-items-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 .contact-item-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
-  gap: 8px;
-  padding: 16px 10px;
-  border-radius: 14px;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 50px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.14);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 .contact-item-card h4 {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.55);
   text-transform: uppercase;
   letter-spacing: 0.07em;
   margin: 0;
+  white-space: nowrap;
 }
 .contact-item-card a,
 .contact-item-card span {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: #ffffff;
+}
+.contact-item-card .contact-icon-wrap {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+}
+.contact-item-card .contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
 .contact-item {
