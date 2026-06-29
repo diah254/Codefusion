@@ -1010,7 +1010,7 @@ img { max-width: 100%; display: block; }
 /* ===== PAGE HEADER ===== */
 .page-header {
   background: linear-gradient(135deg, var(--dark) 0%, var(--dark2) 100%);
-  padding: 140px 0 80px;
+  padding: 100px 0 40px;
   text-align: center;
 }
 .page-header .section-label { margin-bottom: 10px; }
