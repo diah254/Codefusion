@@ -530,8 +530,19 @@ img { max-width: 100%; display: block; }
 /* Skills section text on dark bg */
 #skills .section-label { color: var(--cyan); }
 #skills .section-title { color: #ffffff; }
+#skills .skill-card {
+  background: rgba(10, 10, 35, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
 #skills .skill-info h3 { color: #ffffff !important; }
-#skills .skill-info p  { color: rgba(255,255,255,0.8); }
+#skills .skill-info p  { color: rgba(255,255,255,0.75); }
+#skills .skill-tags span {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.15);
+}
 
 .skill-card {
   background: var(--white);
