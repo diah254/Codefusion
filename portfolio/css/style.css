@@ -805,10 +805,10 @@ img { max-width: 100%; display: block; }
   align-items: start;
 }
 
-/* 3-column row for Email / WhatsApp / Response */
+/* 2-column row for Email / WhatsApp */
 .contact-items-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 .contact-item-card {
@@ -989,8 +989,21 @@ img { max-width: 100%; display: block; }
 
 /* ===== CONTACT DARK BG OVERRIDES ===== */
 #contact .section-label   { color: var(--cyan); }
-#contact .section-title   { color: #ffffff; }
+#contact .section-title   {
+  color: #ffffff;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #ffffff;
+  background-clip: unset;
+}
 #contact .section-desc    { color: rgba(255,255,255,0.7); }
+#contact .btn-primary {
+  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+  box-shadow: 0 4px 20px rgba(6,182,212,0.4);
+}
+#contact .btn-primary:hover {
+  box-shadow: 0 8px 32px rgba(6,182,212,0.6);
+}
 #contact .contact-name-link { color: var(--cyan) !important; }
 #contact .form-group label { color: rgba(255,255,255,0.85); }
 #contact .form-group input,
