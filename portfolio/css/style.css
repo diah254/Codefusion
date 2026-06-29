@@ -35,8 +35,9 @@ body {
 }
 
 body.page-bg {
-  background: #ffffff;
+  background: linear-gradient(150deg, #060614 0%, #071a2e 30%, #0a2a3a 55%, #0d1a30 80%, #060614 100%);
   min-height: 100vh;
+  color: rgba(255,255,255,0.9);
 }
 body.page-bg section,
 body.page-bg .section,
@@ -47,7 +48,37 @@ body.page-bg .article-section {
   background: transparent !important;
 }
 body.page-bg .bg-light {
-  background: #f8fafc !important;
+  background: rgba(255,255,255,0.04) !important;
+}
+
+/* Page-bg: readable text on dark */
+body.page-bg .about-content h2,
+body.page-bg .timeline-body h4,
+body.page-bg .section-title,
+body.page-bg .timeline-col-title,
+body.page-bg .skill-bar-header { color: #ffffff !important; }
+
+body.page-bg .about-lead,
+body.page-bg .about-content > p,
+body.page-bg .timeline-body p,
+body.page-bg .timeline-company { color: rgba(255,255,255,0.65) !important; }
+
+/* Cyan replaces purple on about page */
+body.page-bg .highlight        { color: var(--cyan) !important; }
+body.page-bg .stat-num         { color: var(--cyan) !important; }
+body.page-bg .timeline-col-title { color: var(--cyan) !important; }
+body.page-bg .timeline-dot     { background: var(--cyan) !important; box-shadow: 0 0 0 2px var(--cyan) !important; }
+body.page-bg .timeline-date    { color: var(--cyan) !important; }
+body.page-bg .timeline::before { background: rgba(34,211,238,0.25) !important; }
+body.page-bg .stat-label       { color: rgba(255,255,255,0.55) !important; }
+body.page-bg .about-stats      { border-color: rgba(255,255,255,0.1) !important; }
+body.page-bg .skill-bar-bg     { background: rgba(255,255,255,0.1) !important; }
+body.page-bg .section-label    { color: var(--cyan) !important; }
+
+/* Page header on dark bg */
+body.page-bg .page-header {
+  background: rgba(0,0,0,0.25) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
 }
 
 body.page-bg .hero {
@@ -1156,6 +1187,9 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   border-radius: 50px;
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body.page-bg .skill-bar-fill {
+  background: linear-gradient(90deg, #22d3ee, #0ea5e9) !important;
 }
 
 /* ===== FOOTER ===== */
