@@ -54,7 +54,23 @@ body.page-bg .hero {
   background: #ffffff !important;
 }
 
-#skills    { background: #ffffff; position: relative; overflow: hidden; }
+#skills    {
+  background: url('../images/skills-bg.png') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+#skills::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 6, 20, 0.78);
+  z-index: 0;
+}
+#skills .container,
+#skills .skills-swiper {
+  position: relative;
+  z-index: 1;
+}
 #featured  { background: #ffffff; position: relative; overflow: hidden; }
 #blog      { background: #f8fafc; position: relative; overflow: hidden; }
 #contact   { background: #ffffff !important; position: relative; overflow: hidden; }
@@ -509,6 +525,12 @@ img { max-width: 100%; display: block; }
   width: 300px;
   height: auto;
 }
+
+/* Skills section text on dark bg */
+#skills .section-label { color: var(--cyan); }
+#skills .section-title { color: #ffffff; }
+#skills .skill-info h3 { color: #ffffff !important; }
+#skills .skill-info p  { color: rgba(255,255,255,0.8); }
 
 .skill-card {
   background: var(--white);
