@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Codefusion | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css?v=11" />
-  <link rel="stylesheet" href="css/responsive.css?v=5" />
+  <link rel="stylesheet" href="css/style.css?v=12" />
+  <link rel="stylesheet" href="css/responsive.css?v=6" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -360,68 +360,101 @@
         <p class="section-desc">Have a project in mind or want to chat? I'd love to hear from you.</p>
       </div>
       <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-items-row">
-            <div class="contact-item-card">
-              <div class="contact-icon-wrap icon-gmail">
-                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+
+        <!-- Form card -->
+        <div class="contact-form-wrap">
+          <h3 class="contact-us-title">Contact us</h3>
+          <form class="contact-form" id="contact-form">
+            <input type="hidden" name="access_key" value="7b432833-789e-406f-94f8-5f247b471fb8" />
+            <input type="hidden" name="subject" value="New message from your Codefusion portfolio" />
+            <input type="hidden" name="from_name" value="Codefusion Portfolio" />
+            <div class="form-group form-group-icon">
+              <i class="fas fa-user form-field-icon"></i>
+              <input type="text" id="name" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-group form-group-icon">
+              <i class="fas fa-envelope form-field-icon"></i>
+              <input type="email" id="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-contact btn-full" id="submit-btn">
+              Send Message
+            </button>
+            <p class="form-success" id="form-success" style="display:none;">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you within 24 hours.
+            </p>
+            <p class="form-error" id="form-error" style="display:none;">
+              <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
+            </p>
+            <!-- Direct contact icons below button -->
+            <div class="contact-direct-row">
+              <a href="mailto:bazumnoma254@gmail.com" class="contact-direct-btn contact-direct-gmail" title="Email Diah">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                   <path fill="#EA4335" d="M6 40h6V23.8L4 18v18c0 2.2 1.8 4 4 4z"/>
                   <path fill="#34A853" d="M36 40h6c2.2 0 4-1.8 4-4V18l-8 5.8z"/>
                   <path fill="#FBBC04" d="M36 8l-12 8.7L12 8H4l20 14.5L44 8z"/>
                   <path fill="#4285F4" d="M4 18l8 5.8V8H4z"/>
                   <path fill="#C5221F" d="M44 8h-8v15.8l8-5.8z"/>
                 </svg>
-              </div>
-              <div class="contact-text">
-                <h4>Email</h4>
-                <a href="mailto:bazumnoma254@gmail.com" class="contact-name-link">Diah</a>
-              </div>
-            </div>
-            <div class="contact-item-card">
-              <div class="contact-icon-wrap icon-whatsapp">
+                <span>Gmail</span>
+              </a>
+              <a href="https://wa.me/254746362415" target="_blank" class="contact-direct-btn contact-direct-wa" title="WhatsApp Diah">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
                 </svg>
-              </div>
-              <div class="contact-text">
-                <h4>WhatsApp</h4>
-                <a href="https://wa.me/254746362415" target="_blank" class="contact-name-link">Diah</a>
-              </div>
+                <span>WhatsApp</span>
+              </a>
             </div>
-          </div>
+          </form>
         </div>
-        <form class="contact-form" id="contact-form">
-          <input type="hidden" name="access_key" value="7b432833-789e-406f-94f8-5f247b471fb8" />
-          <input type="hidden" name="subject" value="New message from your Codefusion portfolio" />
-          <input type="hidden" name="from_name" value="Codefusion Portfolio" />
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Diah M." required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="diahm@example.com" required />
-            </div>
-            <div class="form-group">
-              <label for="inquiry">Subject</label>
-              <input type="text" id="inquiry" name="inquiry" placeholder="e.g. Website design..." />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-          <p class="form-success" id="form-success" style="display:none;">
-            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you within 24 hours.
-          </p>
-          <p class="form-error" id="form-error" style="display:none;">
-            <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
-          </p>
-        </form>
+
+        <!-- Illustration -->
+        <div class="contact-illustration" aria-hidden="true">
+          <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Background blob -->
+            <ellipse cx="260" cy="230" rx="200" ry="170" fill="rgba(99,102,241,0.13)" />
+            <!-- Envelope body -->
+            <rect x="100" y="140" width="260" height="180" rx="18" fill="#e8eeff" stroke="#c7d2fe" stroke-width="2"/>
+            <!-- Envelope flap -->
+            <path d="M100 158 L230 248 L360 158" fill="none" stroke="#a5b4fc" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- Envelope bottom fold lines -->
+            <line x1="100" y1="320" x2="200" y2="240" stroke="#c7d2fe" stroke-width="1.5"/>
+            <line x1="360" y1="320" x2="260" y2="240" stroke="#c7d2fe" stroke-width="1.5"/>
+            <!-- Person body -->
+            <circle cx="310" cy="100" r="30" fill="#fcd34d" stroke="#f59e0b" stroke-width="2"/>
+            <!-- Person face details -->
+            <circle cx="302" cy="96" r="3" fill="#1e293b"/>
+            <circle cx="318" cy="96" r="3" fill="#1e293b"/>
+            <path d="M304 108 Q310 114 316 108" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+            <!-- Person torso -->
+            <rect x="287" y="132" width="46" height="60" rx="12" fill="#6366f1"/>
+            <!-- Left arm holding envelope -->
+            <path d="M287 155 Q240 180 210 200" stroke="#fcd34d" stroke-width="14" stroke-linecap="round" fill="none"/>
+            <!-- Right arm up -->
+            <path d="M333 155 Q365 130 370 110" stroke="#fcd34d" stroke-width="14" stroke-linecap="round" fill="none"/>
+            <!-- Legs -->
+            <path d="M298 192 Q292 240 288 280" stroke="#6366f1" stroke-width="14" stroke-linecap="round" fill="none"/>
+            <path d="M322 192 Q328 240 332 280" stroke="#6366f1" stroke-width="14" stroke-linecap="round" fill="none"/>
+            <!-- Shoes -->
+            <ellipse cx="284" cy="283" rx="16" ry="8" fill="#1e293b"/>
+            <ellipse cx="336" cy="283" rx="16" ry="8" fill="#1e293b"/>
+            <!-- Phone icon floating -->
+            <rect x="370" y="170" width="36" height="36" rx="18" fill="rgba(99,102,241,0.18)" stroke="#a5b4fc" stroke-width="1.5"/>
+            <path d="M379 180 Q388 176 392 184 L390 190 Q393 196 398 198 L394 204 Q386 202 382 196 Q376 188 379 180Z" fill="#6366f1"/>
+            <!-- Message icon floating -->
+            <rect x="80" y="80" width="38" height="38" rx="19" fill="rgba(34,197,94,0.15)" stroke="#86efac" stroke-width="1.5"/>
+            <rect x="90" y="90" width="18" height="14" rx="3" fill="#22c55e"/>
+            <path d="M93 108 L90 116 L100 110" fill="#22c55e"/>
+            <!-- Stars / sparkles -->
+            <circle cx="150" cy="80" r="4" fill="#fcd34d" opacity="0.7"/>
+            <circle cx="390" cy="300" r="5" fill="#c084fc" opacity="0.6"/>
+            <circle cx="80" cy="280" r="3" fill="#34d399" opacity="0.6"/>
+            <circle cx="420" cy="130" r="3" fill="#f472b6" opacity="0.7"/>
+          </svg>
+        </div>
+
       </div>
     </div>
   </section>
