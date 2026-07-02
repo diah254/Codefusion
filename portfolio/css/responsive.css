@@ -169,7 +169,7 @@
   .contact-form-wrap { padding: 28px 22px; }
   .form-row { grid-template-columns: 1fr; }
   .form-row .form-group:last-child { grid-column: auto; }
-  .contact-direct-row { flex-direction: column; align-items: stretch; }
+  .contact-direct-row { flex-direction: row; flex-wrap: wrap; justify-content: center; }
 
   /* Footer */
   .footer-inner {
@@ -227,7 +227,7 @@
   .form-row .form-group:last-child { grid-column: auto; }
   .contact-form-wrap { padding: 24px 16px; }
   .contact-us-title { font-size: 1.4rem; }
-  .contact-direct-btn { justify-content: center; }
+  .contact-direct-btn { justify-content: center; flex-direction: row; }
 
   /* Filter bar */
   .filter-btns { gap: 8px; }
